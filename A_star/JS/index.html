@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A*</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		main {
+			width: 100% - 0px;
+			height: 100%;
+		}
+		#controls {
+			position: absolute;
+			top: 1em;
+			right: 1em;
+			border: solid 1px #000;
+			text-align: center;
+			padding: 5px;
+		}
+
+		#controls button {
+			border: solid 1px #000;
+			margin: 5px 5px 5px 0;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+<main>
+	<canvas id="canvas" oncontextmenu="return false;"></canvas>
+
+	<div id="controls">
+		<div style="border: solid 1px #000; margin: 5px 5px 5px 0; padding: 5px;">
+			<button id="solve">Solve</button>
+			<button id="animate">Animate</button>
+			<button id="clear">Clear</button>
+		</div>
+		<div style="border: solid 1px #000; margin: 5px 5px 5px 0; padding: 5px;">
+			<p>
+				H-multiplier: <input id="multiplier" type="range" min=0.0 max=5 step=0.1 value=1 />
+				<span id="multiplier-display">1.0</span>
+			</p>
+			<button id="supergreedy">Super greedy</button>
+			<p>
+				Note: Shortest path can not be <br />guaranteed for multiplier > 1
+			</p>
+		</div>
+
+		<p style="border: solid 1px #000; margin: 5px 5px 5px 0; padding: 5px;">
+			Distance mode<br />
+			<label>Manhattan: <input type="radio" name="h_mode" value="M" checked /></label>
+			&nbsp;&nbsp;&nbsp;
+			<label>Euclidian: <input type="radio" name="h_mode" value="E" /></label>
+		</p>
+	</div>
+</main>
+
+<script src="index.js"></script>
+</body>
+</html>

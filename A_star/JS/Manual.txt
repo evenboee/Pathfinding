@@ -1,0 +1,7 @@
+Left mouse hold to draw walls
+Left ctrl and left click to position start
+Left ctrl and right click to position target
+Right mouse hold to remove walls
+M to run
+N to clear path
+Switch between brush size 1 and 3 by pressing using numrow
